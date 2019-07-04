@@ -19,23 +19,27 @@ import java.util.Date;
 public class MyCordovaPlugin extends CordovaPlugin {
   private static final String TAG = "MyCordovaPlugin";
 
-  public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-    super.initialize(cordova, webView);
-
-    Log.d(TAG, "Initializing MyCordovaPlugin");
+  @Override
+  public void onDestroy() {
+      
   }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-    if(action.equals("echo")) {
-      String phrase = args.getString(0);
-      // Echo back the first argument
-      Log.d(TAG, phrase);
-    } else if(action.equals("getDate")) {
-      // An example of returning data back to the web layer
-      final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
-      callbackContext.sendPluginResult(result);
-    }
+    if(action.equals("init")) {
+      String smartlookAPIKey = args.getString(0);
+      init(smartlookAPIKey);
+      return true;
+    } 
+    
     return true;
+  }
+
+  private void init(String apiKey) {
+    Smartlook.init(apiKey);
+  }
+
+  private void initPassive(String apiKey) {
+    Smartlook.initPassive(apiKey);
   }
 
 }

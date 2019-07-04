@@ -4,11 +4,9 @@ var exec = require('cordova/exec');
 var PLUGIN_NAME = 'MyCordovaPlugin';
 
 var MyCordovaPlugin = {
-  echo: function(phrase, cb) {
-    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
-  },
-  getDate: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  init: function(apiKey) {
+    // exec(onSuccess, onFail, 'Mixpanel', 'alias', [alias, distinctId]);
+    exec(null, null, PLUGIN_NAME, 'init', [apiKey]);
   }
 };
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="my-cordova-plugin"
+    id="cordova-smartlook-plugin"
     version="1.0.0">
-    <name>Cordova Plugin Template</name>
+    <name>Cordova Smartlook Plugin</name>
     <description></description>
     <license>MIT</license>
-    <keywords></keywords>
+    <keywords>cordoava,smartlook,plugin</keywords>
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
 
@@ -25,22 +25,7 @@
         </feature>
       </config-file>
 
+      <framework src="com.mixpanel.android:mixpanel-android:5.6.2"/>
       <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
-    </platform>
-
-    <!-- ios -->
-    <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="MyCordovaPlugin" />
-        </js-module>
-        <config-file target="config.xml" parent="/*">
-            <feature name="MyCordovaPlugin">
-                <param name="ios-package" value="MyCordovaPlugin" onload="true" />
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/MyCordovaPlugin.h" />
-        <source-file src="src/ios/MyCordovaPlugin.m" />
     </platform>
 </plugin>
