@@ -1,19 +1,19 @@
 {
-  "name": "cordova-smartlook-plugin",
+  "name": "cordova-plugin-smartlook",
   "version": "1.0.0",
   "description": "smartlook cordova integration smartlook",
   "cordova": {
-    "id": "cordova-smartlook-plugin",
+    "id": "cordova-plugin-smartlook",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hootfredy/cordova-smartlook-plugin.git"
+    "url": "https://github.com/hootfredy/cordova-plugin-smartlook.git"
   },
   "keywords": [
-    "cordoava",
+    "cordova",
     "smartlook",
     "plugin",
     "ecosystem:cordova",

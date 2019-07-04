@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="cordova-smartlook-plugin"
+    id="cordova-plugin-smartlook"
     version="1.0.0">
     <name>Cordova Smartlook Plugin</name>
     <description></description>
@@ -29,8 +29,8 @@
         </feature>
       </config-file>
 
-      <framework src="com.mixpanel.android:mixpanel-android:5.6.2"/>
       <source-file src="build-extras.gradle" target-dir="src/../" />
       <source-file src="src/android/com/achilles/SmartlookPlugin.java" target-dir="src/com/achilles/" />
+      <framework src="com.smartlook.recording:app:0.9.0.2.5.7-beta"/>
     </platform>
 </plugin>
