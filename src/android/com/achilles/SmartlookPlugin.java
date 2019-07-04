@@ -11,6 +11,7 @@ import org.apache.cordova.PluginResult.Status;
 import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
+import com.smartlook.sdk.smartlook.Smartlook;
 
 import android.util.Log;
 
