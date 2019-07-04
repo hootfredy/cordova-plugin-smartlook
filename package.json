@@ -1,12 +1,24 @@
 {
-  "name": "cordova-plugin-template",
+  "name": "cordova-smartlook-plugin",
   "version": "1.0.0",
+  "description": "smartlook cordova integration smartlook",
   "cordova": {
-    "id": "cordova-plugin-template",
+    "id": "cordova-smartlook-plugin",
     "platforms": [
-      "android",
-      "ios",
+      "android"
     ]
   },
-  "description": "A starting point for a Cordova Plugin"
+  "repository": {
+    "type": "git",
+    "url": "git@git.achilles.systems:BANK/cordova-smartlook-plugin.git"
+  },
+  "keywords": [
+    "cordoava",
+    "smartlook",
+    "plugin",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Fredy",
+  "license": "MIT"
 }
