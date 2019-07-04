@@ -10,22 +10,27 @@
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
 
+    <engines>
+        <engine name="cordova" version=">=6.0.0"></engine>
+    </engines>
+
+    <js-module src="www/smartlook-native.js" name="smartlook-native">
+      <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+      <clobbers target="SmartlookNative" />
+    </js-module>
+
     <!-- android -->
     <platform name="android">
-      <js-module src="www/plugin.js" name="plugin">
-        <runs/>
-
-        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="MyCordovaPlugin" />
-      </js-module>
+      
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MyCordovaPlugin">
-          <param name="android-package" value="com.example.MyCordovaPlugin" />
+        <feature name="SmartlookPlugin">
+          <param name="android-package" value="com.achilles.SmartlookPlugin" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
 
       <framework src="com.mixpanel.android:mixpanel-android:5.6.2"/>
-      <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
+      <source-file src="build-extras.gradle" target-dir="src/../" />
+      <source-file src="src/android/com/achilles/SmartlookPlugin.java" target-dir="src/com/achilles/" />
     </platform>
 </plugin>
