@@ -3,11 +3,10 @@ var exec = require('cordova/exec');
 
 var PLUGIN_NAME = 'SmartlookPlugin';
 
-var SmartlookPlugin = {
-  init: function(apiKey) {
-    // exec(onSuccess, onFail, 'Mixpanel', 'alias', [alias, distinctId]);
-    exec(null, null, PLUGIN_NAME, 'init', [apiKey]);
-  }
-};
+var Smartlook = function() {};
 
-module.exports = SmartlookPlugin;
+Smartlook.init = function (apiKey, successCallback, failCallback) {
+  return exec(successCallback, failCallback, PLUGIN_NAME, 'init', [apiKey]);
+}
+
+module.exports = Smartlook;
