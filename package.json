@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.achilles.systems:BANK/cordova-smartlook-plugin.git"
+    "url": "https://github.com/hootfredy/cordova-smartlook-plugin.git"
   },
   "keywords": [
     "cordoava",
