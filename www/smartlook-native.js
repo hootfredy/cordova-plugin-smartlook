@@ -13,4 +13,8 @@ Smartlook.enableWebviewRecording = function (flag, successCallback, failCallback
   return exec(successCallback, failCallback, PLUGIN_NAME, 'enableWebviewRecording', [flag]);
 }
 
+Smartlook.track = function (eventName, successCallback, failCallback) {
+  return exec(successCallback, failCallback, PLUGIN_NAME, 'track', [eventName]);
+}
+
 module.exports = Smartlook;

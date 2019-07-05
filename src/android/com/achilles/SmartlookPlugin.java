@@ -28,7 +28,7 @@ public class SmartlookPlugin extends CordovaPlugin {
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if(action.equals("init")) {
       String smartlookAPIKey = args.getString(0);
-      init(smartlookAPIKey);
+      Smartlook.init(apiKey);
       return true;
     }
     
@@ -36,6 +36,13 @@ public class SmartlookPlugin extends CordovaPlugin {
       Smartlook.enableWebviewRecording(true);
       return true;
     }
+
+    if(action.equals("enableWebviewRecording")) {
+      String eventName = args.getString(0);
+      Smartlook.track(eventName);
+      return true;
+    }
+    
     
     return true;
   }
