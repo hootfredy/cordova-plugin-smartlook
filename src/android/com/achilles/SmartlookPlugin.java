@@ -30,7 +30,13 @@ public class SmartlookPlugin extends CordovaPlugin {
       String smartlookAPIKey = args.getString(0);
       init(smartlookAPIKey);
       return true;
-    } 
+    }
+    
+    if(action.equals("enableWebviewRecording")) {
+      boolean flag = args.getString(0);
+      Smartlook.enableWebviewRecording(flag);
+      return true;
+    }
     
     return true;
   }
