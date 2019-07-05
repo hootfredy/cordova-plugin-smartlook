@@ -28,7 +28,7 @@ public class SmartlookPlugin extends CordovaPlugin {
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if(action.equals("init")) {
       String smartlookAPIKey = args.getString(0);
-      Smartlook.init(apiKey);
+      Smartlook.init(smartlookAPIKey);
       return true;
     }
     
