@@ -33,8 +33,7 @@ public class SmartlookPlugin extends CordovaPlugin {
     }
     
     if(action.equals("enableWebviewRecording")) {
-      boolean flag = args.getString(0);
-      Smartlook.enableWebviewRecording(flag);
+      Smartlook.enableWebviewRecording(true);
       return true;
     }
     
