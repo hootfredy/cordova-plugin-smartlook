@@ -14,18 +14,17 @@
         <engine name="cordova" version=">=3.6.0"></engine>
     </engines>
 
-    <js-module src="www/smartlook-native.js" name="smartlook-native">
+    <js-module src="www/Smartlook.js" name="Smartlook">
       <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-      <clobbers target="SmartlookNative" />
+      <clobbers target="Smartlook" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
       
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="SmartlookPlugin">
+        <feature name="Smartlook">
           <param name="android-package" value="com.achilles.SmartlookPlugin" />
-          <param name="onload" value="true" />
         </feature>
       </config-file>
 
